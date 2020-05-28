@@ -23,10 +23,10 @@ $("document").ready(function() {
     });
 
     var totalPrice = (toppings + sizeprice + parseInt(crust)) * quantity;
-    let location="";
-if ($("#address").prop('checked')) {
- location = prompt("What is your location?")
-}
+    let location = "";
+    if ($("#address").prop('checked')) {
+      location = prompt("What is your location?")
+    }
     alert('Your order will be delivered at ' + location + ' and the price is ' + totalPrice)
 
   });
