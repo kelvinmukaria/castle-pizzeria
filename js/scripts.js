@@ -2,7 +2,7 @@ $("document").ready(function() {
   $(".submit").click(function() {
     var size = $("#size").val();
     var crust = $("#crust").val();
-
+    var quantity = $("#quantity").val();
     var sizeprice = 0;
 
     if (size = "small") {
@@ -21,6 +21,7 @@ $("document").ready(function() {
 
     });
 
-    alert(toppings + sizeprice + parseInt(crust))
+var totalPrice = (toppings + sizeprice + parseInt(crust))*quantity;
+    alert(totalPrice)
   });
 })
