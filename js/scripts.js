@@ -21,24 +21,13 @@ $("document").ready(function() {
       toppings = toppings + amount;
 
     });
-    //
-    //     $('input[type="checkbox"]').on("click", getLocation);
-    //
-    //
-    // function get(){
-    //      if($(this).prop('checked') == true){
-    //      document.getElementById('text').innerHTML+=$(this).val();
-    //      }
-    //      else{
-    //      var text = document.getElementById('text').innerHTML;
-    //      text=  text.replace($(this).val(),'');
-    //      document.getElementById('text').innerHTML = text;
-    //      }
-    //
-    // }
 
     var totalPrice = (toppings + sizeprice + parseInt(crust)) * quantity;
-    alert(totalPrice)
+    let location="";
+if ($("#address").prop('checked')) {
+ location = prompt("What is your location?")
+}
+    alert('Your order will be delivered at ' + location + ' and the price is ' + totalPrice)
 
   });
 })
